@@ -1,10 +1,10 @@
 # Robo Nurse – Autonomous Mobile Robot (ROS2 Navigation)
 
 ## Overview
-Robo Nurse is a differential-drive Autonomous Mobile Robot developed using ROS2 Humble to achieve reliable indoor navigation. The system integrates custom kinematic modeling, PID-based motion control, SLAM-driven mapping, and Nav2-based autonomous planning. The complete navigation stack was validated in both simulation and real-world deployment.
+Robo Nurse is a differential-drive Autonomous Mobile Robot developed using ROS2 Humble for reliable indoor service navigation. The system integrates custom kinematic modeling, PID-based motion control, SLAM-driven mapping, and Nav2-based autonomous planning to enable stable and collision-free autonomous movement in structured indoor environments. The complete navigation stack was validated in both simulation and real-world deployment.
 
 ## System Architecture
-The robot operates using a layered architecture:
+The system follows a modular layered architecture:
 ### Low-Level Control Layer
 - Custom odometry computation for differential-drive kinematics
 - PID-based velocity control for accurate trajectory tracking
@@ -12,7 +12,7 @@ The robot operates using a layered architecture:
 ### Localization & Mapping Layer
 - SLAM-based map generation
 - AMCL-based localization
-- Sensor fusion using LiDAR and odometry
+- LiDAR and wheel-odometry fusion for state estimation
 ### Navigation Layer
 - ROS2 Nav2 stack integration
 - Global path planning
@@ -25,6 +25,9 @@ ros2 launch amr_navigation bringup.launch.py
 ```
 
 ## Results
+- Achieved stable trajectory tracking through tuned PID control
+- Successfully generated consistent 2D maps using SLAM
+- Demonstrated reliable autonomous navigation in simulation and hardware
 
 ## Demonstration
 🎥 Simulation Demo: [Watch Here](https://youtube.com/yourlink)
