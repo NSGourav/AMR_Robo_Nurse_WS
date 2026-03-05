@@ -30,9 +30,5 @@ ros2 launch amr_navigation bringup.launch.py
 - Demonstrated reliable autonomous navigation in simulation and hardware
 
 ## Demonstration
-🎥 Simulation Demo: [Watch Here](https://youtube.com/yourlink)
 
-🎥 Hardware Demo: [Watch Here](https://youtube.com/yourlink)
-
-## CAD Model
-🛠 CAD Model (Full Assembly): [View on GrabCAD](https://grabcad.com/yourlink)
+🎥 Hardware Demo: [Watch Here](https://drive.google.com/file/d/1VkOmj94tgAvHbysxMINh9iV5L3IFy2YD/view?usp=sharing)
