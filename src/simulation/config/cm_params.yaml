@@ -1,0 +1,6 @@
+# In your_package/config/cm_params.yaml
+
+controller_manager:
+  ros__parameters:
+    update_rate: 1000
+    

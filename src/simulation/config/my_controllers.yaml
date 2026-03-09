@@ -1,0 +1,33 @@
+controller_manager:
+  ros__parameters:
+    update_rate: 50
+    use_sim_time: true
+
+    # The name here MUST match the name in the spawner node.
+    joint_broad:
+      type: joint_state_broadcaster/JointStateBroadcaster
+
+    # The name here MUST match the name in the spawner node.
+    diff_cont:
+      type: diff_drive_controller/DiffDriveController
+
+# This top-level block must also match the spawner name.
+diff_cont:
+  ros__parameters:
+    # The joint names should NOT have a prefix here.
+    # The ros2_control system handles the namespacing.
+    left_wheel_names: ["left_wheel_joint"]
+    right_wheel_names: ["right_wheel_joint"]
+
+    # --- Other parameters are likely correct for your robot ---
+    wheel_separation: 0.297
+    wheel_radius: 0.0325
+    publish_rate: 50.0
+    use_stamped_vel: false
+    open_loop: false
+
+    # Odom frames are correct without prefixes. They will be published
+    # within the robot's namespace (e.g., /robot_0/odom)
+    odom_frame_id: odom
+    base_frame_id: base_link
+    enable_odom_tf: true

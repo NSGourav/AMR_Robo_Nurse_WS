@@ -1,0 +1,20 @@
+twist_mux:
+  ros__parameters:
+    # This is the key line. It tells twist_mux to publish its output
+    # on the topic that the diff_drive_controller is listening to.
+    cmd_vel_out: "diff_cont/cmd_vel_unstamped"
+
+    # Your existing topics and locks sections are below
+    topics:
+      navigation:
+        topic   : cmd_vel
+        timeout : 0.5
+        priority: 10
+      tracker:
+        topic   : cmd_vel_tracker
+        timeout : 0.5
+        priority: 20
+      joystick:
+        topic   : cmd_vel_joy
+        timeout : 0.5
+        priority: 100
